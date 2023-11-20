@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="car">
+        This <span id="modelyear"></span> dream car can be yours for
+        just: $<span id="pricetag"></span>
+        <div id="body">
+        </div>
+        <div id="frontwheel"></div>
+        <div id="backwheel"></div>
+        </div>
+    <script>
+      var dreamCar = {
+        make: "Oldsmobile",
+        model: "98",
+        color: "brown",
+        year: 1983,
+        bodyStyle: "Luxury Car",
+        price: 4500
+      };
+      document.getElementById("pricetag").innerHTML = dreamCar.price;
+      document.getElementById("modelyear").innerHTML = dreamCar.year;
+      document.getElementById("body").innerHTML = dreamCar.make + " " +dreamCar.model;
+
+      alert("The type of dreamCar is: " + typeof dreamCar);
+    </script>
+  </body>
+</html>
