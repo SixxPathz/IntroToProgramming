@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <script>
+      //Chapter 7 Hangman with programming challenges
+      //Player name prompt
+
+      var player1 = prompt("What is your name");
+
+      alert("Good day " + player1 + "!!");
+
+      //Array with words to be guessed
+      var words = [
+        "javascript",
+        "hangman",
+        "boat",
+        "desktop",
+        "programing",
+        "advanced",
+        "student",
+        "bootcamp",
+      ];
+      var word = words[Math.floor(Math.random() * words.length)];
+
+      //empty array for answers
+      var answerArray = [];
+
+      //loop to fill answer array with blanks with the same length as the word selected
+      var i = 0;
+      while (i < word.length) {
+        answerArray[i] = "_";
+        i++;
+      }
+      var remainingLetters = word.length;
+
+      var numGuess = 0;
+
+      //the gameloop
+      while (remainingLetters > 0 && numGuess < 6) {
+        alert(answerArray.join(" "));
+        var guess = prompt("Guess a letter or cancel to stop playing");
+        numGuess++;
+        if (guess === null) {
+          break;
+        } else if (guess.length != 1) {
+          alert("Please enter a single letter");
+        } else {
+          guess = guess.toLowerCase();
+          for (var a = 0; a < word.length; a++) {
+            if (word[a] === guess) {
+              if (answerArray[a] === "_") {
+                answerArray[a] = guess;
+                remainingLetters--;
+              } else {
+                alert("You have already guessed this letter: " + guess);
+              }
+            }
+          }
+        }
+      }
+
+      alert(answerArray.join(" "));
+      if (remainingLetters === 0) {
+        alert("Good job!");
+      } else if (numGuess > 5) {
+        alert("You ran out of guesses");
+      } else {
+        alert("sorry that you quit");
+      }
+    </script>
+  </body>
+</html>
