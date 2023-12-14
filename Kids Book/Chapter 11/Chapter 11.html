@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>People I know</h1>
+    <div id="peopleIKnow"></div>
+  
+    <script>
+      var people = [
+        "Mary",
+        "Bobby",
+        "Judy",
+        "Eddie",
+        "Herbie",
+        "Tony",
+        "Bobby"
+      ];
+      var otherPeople = ["Teddy", "Cathy", "G-Berg", "Georgie"];
+/*------------------------------------------------------------------------------------------------------------------------------------
+using toString() and toString() methods
+
+      //converts array elements to strings using the Id from the div toString() does the same
+      document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using concat() method
+
+      people = people.concat(otherPeople); //combine the 2 arrays
+
+      document.getElementById("peopleIKnow1").innerHTML = people.toString(); //Combined arrays displayed
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using indexOf() method
+
+      people = people.indexOf("Eddie"); //Find the index the element
+      document.getElementById("peopleIKnow").innerHTML = people.toString(); //Display its position
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using join() method
+
+people = people.join("--");
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using lastIndexOf() method
+
+people = people.lastIndexOf("Bobby");
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using pop() method to remove from last index
+
+people = people.pop();
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using push() method to add to last index
+
+people.push("Sandile")
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using reverse() method to reverse the array
+
+
+people = people.reverse();
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using shift() method to remove first item from the array
+
+people.shift();
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using unshift() method to add element as the first item 
+
+
+people.unshift("Sandile");
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using slice() method to xtract items from the array
+
+people = people.slice(0,4);
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using sort() method to sort items alphabetically
+
+people = people.sort();
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------
+using splice() method to add and remove items in certain positions
+------------------------------------------------------------------------------------------------------------------------------------*/
+people.splice(2,3,"Dash");
+document.getElementById("peopleIKnow").innerHTML = people.toString();
+
+
+    </script>
+  </body>
+</html>
