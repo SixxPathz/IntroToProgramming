@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*---------------------------------------------------------------------------------------------------------------------
+CHAPTER 3: GIVING AND RECIEVING DATA
+---------------------------------------------------------------------------------------------------------------------*/
+      let book; // empty string variable
+      book = "A first book of javascript";
+      console.log(book);
+      console.log(book.length); // length of string
+      console.log(book.indexOf("book")); // finds index of parameter
+      let isBook = true; // boolean data type
+      let aNumber = 10 + 10; // number data type
+
+      /*---------------------------------------------------------------------------------------------------------------------
+Prompting user for input and Storing
+---------------------------------------------------------------------------------------------------------------------*/
+      let book2 = prompt("What is name of the second book?");
+      alert("The second book is: " + book2);
+      //Making changes to the page
+
+      /*---------------------------------------------------------------------------------------------------------------------
+Combining Output and input
+---------------------------------------------------------------------------------------------------------------------*/
+      let toName = "Sandile";
+      let fromName = "The Grammy Awards";
+
+      var letterBody =
+        "We are pleased to inform you that your song, 'Can't Stop Coding!,' has been voted the Best Song of All Time by the awarding committee.";
+
+      document.write("Dear " + toName + ",<br><br>");
+      document.write(letterBody + "<br><br>");
+      document.write("Sincerely,<br>");
+      document.write(fromName);
+    </script>
+  </body>
+</html>

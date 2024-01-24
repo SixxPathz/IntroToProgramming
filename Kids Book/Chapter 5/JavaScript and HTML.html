@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="myName">Sandile</h1>
+    <hr />
+
+    <p id="aboutMe">
+      <em>
+        I'm learning to build dynamic web pages with JavaScript and HTML!</em
+      >
+    </p>
+    <hr />
+    <h2>Things I like</h2>
+    <p>Here are some of the things I like to do:</p>
+    <ul>
+      <li id="firstThing">Gaming</li>
+      <li id="secondThing">Coding</li>
+      <li id="thirdThing">Dance</li>
+    </ul>
+
+    <button id="changeList" type="button">Change the list</button>
+
+    <script>
+      let item1;
+      let item2;
+      let item3;
+
+      document.getElementById("changeList").onclick = newList;
+
+      function newList() {
+        item1 = prompt("What is the first item? ");
+        item2 = prompt("What is the second item? ");
+        item3 = prompt("What is the third item? ");
+        updateList();
+      }
+
+      function updateList() {
+        document.getElementById("firstThing").innerHTML = item1;
+        document.getElementById("secondThing").innerHTML = item2;
+        document.getElementById("thirdThing").innerHTML = item3;
+      }
+    </script>
+  </body>
+</html>

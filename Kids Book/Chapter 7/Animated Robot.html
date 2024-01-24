@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div id="robot">
+      <div id="head">
+        <div class="eye" id="righteye"></div>
+        <div class="eye" id="lefteye"></div>
+        <div id="nose"></div>
+        <div id="mouth"></div>
+      </div>
+      <div class="arm" id="rightarm"></div>
+      <div id="body">
+        <p>I &lt;3 JS!</p>
+      </div>
+      <div class="arm" id="leftarm"></div>
+    </div>
+
+    <script>
+      document.getElementById("lefteye").style.backgroundColor = "purple";
+      /*document.getElementById("head").style.transform = "rotate(-15deg)"; //tilt head opposite direction
+      */document.getElementById("nose").style.borderRadius = "50%";
+      document.getElementById("rightarm").style.backgroundColor = "green";
+      document.getElementById("mouth").style.backgroundColor = "pink";
+
+      let rightEye = document.getElementById("righteye");
+      let leftEye = document.getElementById("lefteye");
+      let leftarm = document.getElementById("leftarm");
+
+      rightEye.addEventListener("click", moveUpDown); //Event listner
+      leftEye.addEventListener("click", moveUpDown); //Event listner
+      leftarm.addEventListener("click", moveRightLeft); //Event listner
+      head.addEventListener("click", tilt); //Event listner
+
+      function moveUpDown(e) {
+        let robotPart = e.target;
+        let top = 0; // part is reset to zero when clicked
+        let id = setInterval(frame, 10); // draw every 10ms
+
+        //Fucntion to animate
+        function frame() {
+          robotPart.style.top = top + "%";
+          top++;
+          if (top === 20) {
+            clearInterval(id);
+          }
+        }
+      }
+
+      function moveRightLeft(e) {
+        let part = e.target;
+        let left = 0; // part is reset to zero when clicked
+        let id = setInterval(frame, 50); // draw every 50ms
+        function frame() {
+          part.style.left = left + "%";
+          left++;
+          if (left === 70) {
+            clearInterval(id);
+          }
+        }
+      }
+
+      function tilt(e){
+        let part = e.target;
+        let rotate = -15;
+        let id = setInterval(frame, 20); // draw every 20ms
+
+        function frame() {
+            part.style.transform = "rotate("+rotate +"deg)";
+            rotate++;
+            if (rotate === 1){
+                clearInterval(id);
+            }
+        }
+
+        
+      }
+
+
+    </script>
+  </body>
+</html>
